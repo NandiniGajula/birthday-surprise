@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#b9e4f7">
+  <title>For Bujji 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-glow"></div>
+  <div class="leaf leaf-one">❧</div><div class="leaf leaf-two">❧</div>
+  <div class="sparkles" aria-hidden="true">✦　♡　✧　♡　✦</div>
+
+  <main>
+    <!-- SCREEN 1: PASSCODE -->
+    <section id="lockScreen" class="screen lock-screen active">
+      <div class="paper-card lock-card">
+        <div class="tiny-label">A LITTLE SURPRISE, JUST FOR YOU</div>
+        <h1 class="lock-title">ENTER PASSCODE<span>....</span></h1>
+        <p class="subtle">Only my favourite person knows the way in 💙</p>
+        <div class="lock-layout">
+          <div class="polaroid">
+            <div class="photo-placeholder" id="lockPhoto">
+              <img src="images/passcode-photo.jpeg"
+                   alt="My favourite person">
+          </div>
+            <span>my favourite human</span>
+          </div>
+          <div class="keypad-wrap">
+            <div class="dots" id="dots" aria-label="Passcode progress">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="keypad" id="keypad">
+              <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+              <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+              <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+              <button class="utility" data-key="clear">⌫</button><button data-key="0">0</button><button class="utility" data-key="enter">↵</button>
+            </div>
+            <p id="lockMessage" class="lock-message">Enter the 4-digit secret</p>
+            <button id="unlockBtn" class="text-button">Unlock my surprise ✨</button>
+          </div>
+        </div>
+        <p class="hint">A tiny code opens a big bundle of love.</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: CLICK TO OPEN -->
+    <section id="welcomeScreen" class="screen">
+      <div class="paper-card welcome-card">
+        <p class="eyebrow">YOU MADE IT IN!</p>
+        <div class="big-heart">♡</div>
+        <h1 class="script-heading">Happiest Birthday</h1>
+        <h2 class="name-heading">Bujji nanna <span>💙</span></h2>
+        <p class="welcome-copy">I made a little corner of the internet<br>to remind you how special you are to me.</p>
+        <div class="envelope" id="envelope" role="img" aria-label="A blue envelope with a heart">
+          <div class="envelope-back"></div><div class="letter-peek">A note for you…</div>
+          <div class="envelope-front"></div><div class="envelope-flap"></div><div class="envelope-heart">♥</div>
+        </div>
+        <button id="openLetterBtn" class="primary-button">Open your surprise <span>♡</span></button>
+        <p class="micro-copy">P.S. Keep your heart ready 🫂</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: LETTER -->
+    <section id="letterScreen" class="screen">
+      <div class="paper-card letter-card">
+        <div class="letter-top">A LETTER FROM MY HEART</div>
+        <div class="letter-decoration">✧　♡　✧</div>
+        <h1 class="script-heading">To my Bujji nanna,</h1>
+        <p class="letter-text">Happiest birthday Bujji nanna. 💙</p>
+        <p class="letter-text">Thank you for standing with me in every situation. You made my life easier to go through, and I am grateful for you in more ways than I can ever explain.</p>
+        <p class="letter-text">Be with me till my last breath, Bujji. 🫂😘😍</p>
+        <p class="signature">Always your person ♡</p>
+        <div class="letter-actions">
+          <button class="secondary-button" id="backToWelcome">Back</button>
+          <button class="primary-button" id="memoriesBtn">Our little memories →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: MEMORIES -->
+    <section id="memoriesScreen" class="screen">
+      <div class="paper-card memories-card">
+        <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+        <h1 class="script-heading">Our memory corner</h1>
+    
+        <div class="gallery">
+
+          <div class="memory-frame">
+            <img src="images/photo1.jpeg" alt="Our memory">
+            <p>My favourite moment 💙</p>
+          </div>
+        
+          <div class="memory-frame">
+            <img src="images/photo2.jpeg" alt="Our memories">
+            <p>Forever memories 🫂</p>
+          </div>
+        
+          <div class="memory-frame">
+            <img src="images/photo3.jpeg" alt="Together">
+            <p>Always us 😍</p>
+          </div>
+        
+        
+        
+        </div>
+        <div class="final-note">
+          <span>♡</span>
+          <p>One more year of you being you.<br>And one more year of me being lucky to have you.</p>
+          <strong>Happy Birthday, Bujji! 💙</strong>
+        </div>
+        <button id="restartBtn" class="secondary-button">Relive the surprise ↺</button>
+      </div>
+    </section>
+  </main>
+
+  
+<footer>MADE WITH SO MUCH LOVE · FOR BUJJI 💌</footer>
+<div id="toast" class="toast" role="status"></div>
+
+<!-- Background music -->
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="audio/birthday-song.mpeg" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<!-- Load JavaScript only once, after the audio element -->
+<script src="script.js"></script>
+</body>
+</html>
+
